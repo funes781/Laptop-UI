@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Document</title>
+</head>
+<body>
+   <div id="ui-container" class="hidde">
+    <div class="contx">
+        <div class="container">
+            <div class="laptop">
+                <div class="screen">
+                    <div class="mark-container">
+                        <p>MacBook Pro</p>
+                    </div>
+                    <div class="screen-cam">
+                        <div class="camera"></div>
+                    </div>
+                    <div class="screen-bg hidde"></div>
+                    <div class="screen-inner hidde">
+                        <div class="interaction-container">
+                            <div class="data-container">
+                                <span class="batproc">100%</span>
+                                <i class="material-icons rotate">battery_full</i>
+                                        <i class="material-icons wifi">wifi</i>
+                                            <div id="clock">
+                                                <span id="hour"></span>:
+                                                <span id="minute"></span>
+                                                <span id="ampm"></span>
+                                          </div>
+                                          <br>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="loading-container hidden">
+                            <div class="lcontainer">
+                                <div class="loading-cont">
+                                    <img src="img/applelogo.png" height="95px" width="95px">
+                                    <div class="loading-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="base">
+                    <div class="base-touch"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+<script>
+    function updateClock() {
+  let date = new Date();
+  let hour = date.getHours();
+  let minute = date.getMinutes();
+  let ampm = hour >= 12 ? 'PM' : 'AM';
+  hour = hour % 12;
+  hour = hour ? hour : 12;
+  minute = minute < 10 ? '0' + minute : minute;
+  document.querySelector('#hour').textContent = hour;
+  document.querySelector('#minute').textContent = minute;
+  document.querySelector('#ampm').textContent = ampm;
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+<script>
+    window.addEventListener('load', function() {
+    document.querySelector('#ui-container').classList.remove('hidden');
+    let loadingContainer = document.querySelector('.loading-container');
+    loadingContainer.classList.remove('hidden');
+    let counter = 0;
+    let interval = setInterval(function() {
+        counter++;
+        if (counter === 5) {
+            loadingContainer.classList.add('hidden');
+            document.querySelector('.screen-inner').classList.remove('hidden');
+            document.querySelector('.screen-bg').classList.remove('hidden');
+            clearInterval(interval);
+        }
+    }, 1000);
+});
+</script>
+
+</body>
+</html>

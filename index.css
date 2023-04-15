@@ -1,0 +1,252 @@
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+.hidden {
+    display: none;
+}
+
+#ui-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.container {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.laptop {
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    
+}
+
+.screen-cam {
+    margin-top: 7px;
+    margin-left: 345px;
+    height: 10px;
+    width: 10px;
+    background-color: rgb(105, 110, 110);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.camera {
+    height: 5px;
+    width: 5px;
+    background-color: rgb(200, 200, 202);
+    border-radius: 50%;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.screen {
+    margin-top: 80px;
+    width: 700px;
+    height: 500px;
+    background-color: black;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border: 3px solid #c0c0c0;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.base {
+    width: 800px;
+    height: 20px;
+    background-color: #c0c0c0;
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.base-touch {
+    width: 150px;
+    height: 13px;
+    background-color: #b6b3b3;
+    border-radius: 0 0 15px 15px;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.screen-inner {
+    background-color: transparent;
+    height: 450px;
+    width: 650px;
+    border-radius: 5px;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-container {
+    height: 450px;
+    width: 650px;
+    background-color: rgb(35, 36, 36);
+    border-radius: 5px;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lcontainer {
+    height: 400px;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.loading-cont {
+    margin-top: 140px;
+    width: 40%;
+    height: 10px;
+    background-color: #535252;
+    border-radius: 20px;
+}
+
+.loading-cont img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-bar {
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    animation: loading 5s linear infinite;
+    border-radius: 20px;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.screen-bg {
+    background-image: url(img/wallp.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.interaction-container {
+    height: 450px;
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data-container {
+    margin: 0 20px;
+    margin-left: 505px;
+    margin-top: -430px;
+    position: absolute;
+    height: 15px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+.batproc {
+    margin: 0 2px;
+    font-size: small;
+    color: white;
+    font-family: 'San Francisco';
+}
+
+.rotate {
+    margin: 0 2px;
+    transform: rotate(90deg);
+    color: white;
+}
+
+.wifi {
+    margin: 0 5px;
+    color: white;
+}
+
+#clock {
+    display: flex;
+    color: white;
+}
+
+#hour {
+    font-family: 'San Francisco';
+    color: white;
+}
+
+#minute {
+    color: white;
+    font-family: 'San Francisco';
+}
+
+#ampm {
+    margin: 0 3px;
+    font-family: 'San Francisco';
+    color: white;
+}
+
+.data-container #ampm #minute #hour #clock .wifi .rotate .batproc i {
+    user-select: none;
+    cursor: default;
+}
+
+.interaction-container * {
+    user-select: none;
+}
+
+
+.mark-container {
+    height: 20px;
+    width: 100px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 236px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mark-container p {
+    font-family: 'San Francisco';
+    color: #858282;
+    user-select: none;
+}
+
